@@ -1,0 +1,27 @@
+{
+  "name": "knockout.lock",
+  "version": "0.0.1",
+  "homepage": "https://github.com/CrissDev/knockout.lock",
+  "authors": [
+    "cristian <t4013-github@yahoo.com>"
+  ],
+  "description": "A simple knockout binding to enable / disable input elements",
+  "keywords": [
+    "knockout",
+    "ko",
+    "lock",
+    "binding"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "knockout": "~3.1.0"
+  }
+}
