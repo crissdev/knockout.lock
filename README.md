@@ -3,6 +3,8 @@
 
 A simple knockout binding to enable / disable input elements.
 
+[![Build Status](https://travis-ci.org/CrissDev/knockout.lock.svg?branch=master)](https://travis-ci.org/CrissDev/knockout.lock)
+
 
 ## Installation
 
