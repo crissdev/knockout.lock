@@ -10,7 +10,9 @@
     "knockout",
     "ko",
     "lock",
-    "binding"
+    "binding",
+    "knockout-lock",
+    "knockout.lock"
   ],
   "license": "MIT",
   "ignore": [

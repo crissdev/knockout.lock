@@ -1,8 +1,6 @@
-// knockout.lock, v0.0.1
-// Copyright (c)2014 Cristian Trifan (cristian)
-// Distributed under MIT license
-// https://github.com/CrissDev/knockout.lock
-define(['knockout'], function(ko) {
+/*! (c) 2014 Cristian Trifan (MIT) */
+define(["knockout"],function(ko){
+
 'use strict';
 
 
@@ -57,4 +55,7 @@ var lockBinding = {
 };
 
 ko.bindingHandlers.lock = lockBinding;
+
+return lockBinding;
+
 });

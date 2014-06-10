@@ -1,7 +1,4 @@
-// knockout.lock, v0.0.1
-// Copyright (c)2014 Cristian Trifan (cristian)
-// Distributed under MIT license
-// https://github.com/CrissDev/knockout.lock
+/*! (c) 2014 Cristian Trifan (MIT) */
 (function(ko) {
 'use strict';
 
