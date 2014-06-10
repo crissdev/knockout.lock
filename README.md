@@ -4,6 +4,12 @@
 A simple knockout binding to enable / disable input elements.
 
 
+## Installation
+
+Install with ```bower```:
+
+    bower install knockout.lock
+
 ## Usage
 
 ```html
