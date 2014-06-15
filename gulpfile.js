@@ -30,10 +30,12 @@
             uglify  = require('gulp-uglify'),
             rename  = require('gulp-rename'),
             amdWrap = require('gulp-wrap-amd'),
-            license = require('gulp-license');
+            license = require('gulp-license'),
+            header  = require('gulp-header');
 
         return gulp.src('src/knockout.lock.js')
             .pipe(amdWrap({ deps: ['knockout'], params: ['ko'], exports: 'lockBinding' }))
+            .pipe(header('/*jshint quotmark:false*/\n'))
             .pipe(license('MIT', { tiny: true, organization: 'Cristian Trifan' }))
             .pipe(rename('knockout.lock.amd.js'))
             .pipe(jshint())
