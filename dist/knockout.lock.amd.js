@@ -1,38 +1,23 @@
 /*! (c) 2014 Cristian Trifan (MIT) */
+/*jshint quotmark:false*/
 define(["knockout"],function(ko){
 
 'use strict';
 
 
-var _refreshBindings = function(element) {
-    // If we have a disable binding then we request to be evaluated
-    var context = ko.contextFor(element),
-        bindingsAccessor = ko.bindingProvider.instance.getBindings(element, context);
-
-    if (bindingsAccessor && bindingsAccessor.disable) {
-        bindingsAccessor.disable.valueHasMutated();
-    }
-};
-
-var _processTree = function(elements, lock) {
+var _processElements = function(elements, lock) {
     var element, i;
 
     for (i = 0; i < elements.length; i++) {
         element = elements[i];
 
-        if (element instanceof HTMLInputElement) {
-            if (element.getAttribute('data-lock-exclude') !== 'true') {
-                if (lock) {
-                    element.setAttribute('disabled', 'disabled');
-                }
-                else {
-                    element.removeAttribute('disabled');
-                    _refreshBindings(element);
-                }
+        if (element.getAttribute('data-lock-exclude') !== 'true') {
+            if ('disabled' in element) {
+                element.disabled = lock;
             }
-        }
-        else if (element.getAttribute('data-lock-exclude') !== 'true') {
-            _processTree(element.children, lock);
+            if (element.childElementCount > 0) {
+                _processElements(element.children, lock);
+            }
         }
     }
 };
@@ -42,15 +27,12 @@ var lockBinding = {
     update: function(element, valueAccessor, allBindingsAccessor) {
         var lock = ko.utils.unwrapObservable(valueAccessor()),
             customSelector = allBindingsAccessor.get('lockSelector'),
-            elements = [];
-
-        if (element instanceof HTMLInputElement) {
             elements = [element];
+
+        if (customSelector) {
+            elements = element.querySelectorAll(customSelector);
         }
-        else {
-            elements = (customSelector ? element.querySelectorAll(customSelector) : element.children);
-        }
-        _processTree(elements, lock);
+        _processElements(elements, !!lock);
     }
 };
 

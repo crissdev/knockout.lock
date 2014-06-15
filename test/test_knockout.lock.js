@@ -22,7 +22,25 @@ describe('lock binding', function() {
 
         ko.applyBindings({ lock: ko.observable(true) }, input);
 
-        expect(input.getAttribute('disabled')).toBe('disabled');
+        expect(input.disabled).toBe(true);
+    });
+
+    it('should lock \'button\' element', function() {
+        var input = document.createElement('button');
+
+        input.setAttribute('data-bind', 'lock: $data.lock');
+        ko.applyBindings({ lock: ko.observable(true) }, input);
+
+        expect(input.disabled).toBe(true);
+    });
+
+    it('should lock \'select\' element', function() {
+        var input = document.createElement('select');
+
+        input.setAttribute('data-bind', 'lock: $data.lock');
+        ko.applyBindings({ lock: ko.observable(true) }, input);
+
+        expect(input.disabled).toBe(true);
     });
 
     it('should lock contained input', function() {
