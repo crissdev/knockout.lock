@@ -6,18 +6,18 @@
     "test": "test"
   },
   "devDependencies": {
-    "gulp": "~3.8.6",
+    "gulp": "~3.8.8",
     "gulp-footer": "~1.0.5",
-    "gulp-header": "~1.0.5",
-    "gulp-jshint": "~1.7.0",
+    "gulp-header": "~1.1.1",
+    "gulp-jshint": "~1.8.5",
     "gulp-karma": "0.0.4",
     "gulp-rename": "~1.2.0",
-    "gulp-uglify": "~0.3.0",
-    "jshint-stylish": "~0.4.0",
-    "karma": "~0.12.16",
+    "gulp-uglify": "~1.0.1",
+    "jshint-stylish": "~1.0.0",
+    "karma": "~0.12.24",
     "karma-jasmine": "~0.1.5",
-    "gulp-wrap-amd": "~0.3.0",
-    "gulp-license": "~0.2.0",
+    "gulp-wrap-amd": "~0.3.1",
+    "gulp-license": "~1.0.0",
     "karma-phantomjs-launcher": "~0.1.4"
   },
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CrissDev/knockout.lock.git"
+    "url": "https://github.com/crissdev/knockout.lock.git"
   },
   "keywords": [
     "knockout",
@@ -35,9 +35,9 @@
     "knockout-lock",
     "knockout.lock"
   ],
-  "author": "cristian <t4013-github@yahoo.com>",
+  "author": "crissdev <criss.trifan@gmail.com> (http://crissdev.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CrissDev/knockout.lock/issues"
+    "url": "https://github.com/crissdev/knockout.lock/issues"
   }
 }

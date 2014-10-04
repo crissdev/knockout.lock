@@ -3,8 +3,8 @@
 
 A simple knockout binding to enable / disable input elements.
 
-[![Build Status](https://travis-ci.org/CrissDev/knockout.lock.svg?branch=master)](https://travis-ci.org/CrissDev/knockout.lock)
-[![devDependency Status](https://david-dm.org/CrissDev/knockout.lock/dev-status.svg)](https://david-dm.org/CrissDev/knockout.lock#info=devDependencies)
+[![Build Status](https://travis-ci.org/crissdv/knockout.lock.svg?branch=master)](https://travis-ci.org/crissdev/knockout.lock)
+[![devDependency Status](https://david-dm.org/crissdev/knockout.lock/dev-status.svg)](https://david-dm.org/crissdev/knockout.lock#info=devDependencies)
 
 
 ## Installation
@@ -20,10 +20,10 @@ Install with ```bower```:
     <!-- These inputs will be locked -->
     <input type="text"/>
     <input type="button" value="Update">
-    
+
     <!-- Don't disable this input -->
     <input text="true" data-lock-exclude="true"/>
-    
+
     <!-- Don't disable any inputs within this container -->
     <div data-lock-exclude="true">
         <input type="text"/>
