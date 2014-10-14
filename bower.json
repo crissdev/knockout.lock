@@ -22,9 +22,13 @@
     "bower_components",
     "vendor",
     "test",
-    "tests"
+    "tests",
+    "gulpfile.js",
+    "karma.conf.js",
+    "src",
+    "package.json"
   ],
   "devDependencies": {
-    "knockout": "~3.1.0"
+    "knockout": "~3.2.0"
   }
 }
